@@ -43,15 +43,6 @@ const Text = styled.h3<{ isPositive: boolean }>`
   }
 `;
 
-const PercentPrice = styled.div`
-  font-size: 28px;
-  font-weight: 700;
-  padding: 12px;
-  .arrow {
-    margin: 0px 10px -2px;
-  }
-`;
-
 function checkValue(value: number | undefined) {
   if (value) {
     return value > 0;
@@ -97,13 +88,6 @@ interface PriceData {
 }
 
 function Price({ coinId }: PriceProps) {
-  const { isLoading, data } = useQuery<PriceData[]>(
-    ["ohlcv", coinId],
-    () => fetchCoinHistory(coinId),
-    {
-      refetchInterval: 5000,
-    }
-  );
   const { isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
     ["tickers", coinId],
     () => fetchCoinTickers(coinId),

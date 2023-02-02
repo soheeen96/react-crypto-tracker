@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Router from "./Router";
 import "./App.css";
