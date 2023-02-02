@@ -243,7 +243,7 @@ function Coin({}: ICoinProps) {
             </OverviewItem>
             <OverviewItem>
               <span>가격</span>
-              <span>${tickersData?.quotes.USD.price.toFixed(3)}</span>
+              <span>{tickersData?.quotes.USD.price.toFixed(3)}</span>
             </OverviewItem>
           </Overview>
 
